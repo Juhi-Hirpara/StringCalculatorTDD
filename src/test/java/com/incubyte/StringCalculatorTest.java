@@ -41,6 +41,17 @@ public class StringCalculatorTest {
         StringCalculator calc = new StringCalculator();
         assertAndLog(3, "//;\n1;2", calc);
     }
+    @Test
+    public void testNegativeNumbersShouldThrowException() {
+        StringCalculator calc = new StringCalculator();
+        try {
+            calc.add("1,-2,-3");
+            Assert.fail("Exception expected for negative numbers");
+        } catch (IllegalArgumentException e) {
+            Assert.assertTrue(e.getMessage().contains("-2"));
+            Assert.assertTrue(e.getMessage().contains("-3"));
+        }
+    }
 
 
 }
