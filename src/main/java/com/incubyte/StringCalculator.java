@@ -5,6 +5,7 @@ public class StringCalculator {
         if (numbers == null || numbers.isEmpty()) {
             return 0;
         }
+        numbers = numbers.replace("\n", ",");
 
         String[] parts = numbers.split(","); // Split by comma
 
