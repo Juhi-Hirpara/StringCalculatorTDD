@@ -62,6 +62,11 @@ public class StringCalculatorTest {
         StringCalculator calc = new StringCalculator();
         assertAndLog(6, "//[***]\n1***2***3", calc);
     }
+    @Test
+    public void testMultipleDelimiters() {
+        StringCalculator calc = new StringCalculator();
+        assertAndLog(6, "//[*][%]\n1*2%3", calc);
+    }
 
 
 
