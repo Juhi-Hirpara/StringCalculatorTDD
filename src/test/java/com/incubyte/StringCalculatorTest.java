@@ -67,8 +67,14 @@ public class StringCalculatorTest {
         StringCalculator calc = new StringCalculator();
         assertAndLog(6, "//[*][%]\n1*2%3", calc);
     }
-
-
-
-
+    @Test
+    public void testMultipleDelimitersWithLengthMoreThanOneChar() {
+        StringCalculator calc = new StringCalculator();
+        assertAndLog(10, "//[***][%%]\n1***2%%3***4", calc);
+    }
 }
+
+
+
+
+
