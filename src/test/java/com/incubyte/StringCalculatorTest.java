@@ -52,6 +52,12 @@ public class StringCalculatorTest {
             Assert.assertTrue(e.getMessage().contains("-3"));
         }
     }
+    @Test
+    public void testNumbersGreaterThan1000AreIgnored() {
+        StringCalculator calc = new StringCalculator();
+        assertAndLog(2, "2,1001", calc);
+    }
+
 
 
 }

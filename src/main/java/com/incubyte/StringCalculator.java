@@ -1,5 +1,8 @@
 package com.incubyte;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class StringCalculator {
     public int add(String numbers) {
         if (numbers == null || numbers.isEmpty()) {
@@ -16,8 +19,19 @@ public class StringCalculator {
         String[] parts = numbers.split(","); // Split by comma
 
         int sum = 0;
+        List<Integer> negatives = new ArrayList<>();
+
         for (String part : parts) {
-            sum += Integer.parseInt(part.trim());
+            int num = Integer.parseInt(part.trim());
+            if (num < 0) {
+                negatives.add(num);
+            } else if (num <= 1000) {
+                sum += num;
+            }
+        }
+
+        if (!negatives.isEmpty()) {
+            throw new IllegalArgumentException("negative numbers not allowed " + negatives);
         }
 
         return sum;
