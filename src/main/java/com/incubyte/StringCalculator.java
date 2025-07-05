@@ -5,8 +5,14 @@ public class StringCalculator {
         if (numbers == null || numbers.isEmpty()) {
             return 0;
         }
-        numbers = numbers.replace("\n", ",");
 
+        if (numbers.startsWith("//")) {
+            String[] headerParts = numbers.split("\n", 2);
+            String delimiter = headerParts[0].substring(2);
+            numbers = headerParts[1].replace(delimiter, ",");
+        }
+
+        numbers = numbers.replace("\n", ",");
         String[] parts = numbers.split(","); // Split by comma
 
         int sum = 0;
@@ -16,5 +22,4 @@ public class StringCalculator {
 
         return sum;
     }
-
 }
