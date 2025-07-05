@@ -57,6 +57,11 @@ public class StringCalculatorTest {
         StringCalculator calc = new StringCalculator();
         assertAndLog(2, "2,1001", calc);
     }
+    @Test
+    public void testCustomDelimiterOfAnyLength() {
+        StringCalculator calc = new StringCalculator();
+        assertAndLog(6, "//[***]\n1***2***3", calc);
+    }
 
 
 
