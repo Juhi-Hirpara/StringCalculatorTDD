@@ -25,5 +25,10 @@ public class StringCalculatorTest {
         StringCalculator calc = new StringCalculator();
         assertAndLog(3, "1,2", calc);
     }
+    @Test
+    public void testMultipleNumbersShouldReturnSum() {
+        StringCalculator calc = new StringCalculator();
+        assertAndLog(15, "1,2,3,4,5", calc);
+    }
 
 }
