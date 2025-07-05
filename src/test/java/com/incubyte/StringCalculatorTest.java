@@ -36,5 +36,11 @@ public class StringCalculatorTest {
         StringCalculator calc = new StringCalculator();
         assertAndLog(6, "1\n2,3", calc);
     }
+    @Test
+    public void testCustomDelimiterSemicolon() {
+        StringCalculator calc = new StringCalculator();
+        assertAndLog(3, "//;\n1;2", calc);
+    }
+
 
 }
