@@ -31,4 +31,10 @@ public class StringCalculatorTest {
         assertAndLog(15, "1,2,3,4,5", calc);
     }
 
+    @Test
+    public void testNewlineBetweenNumbersShouldReturnSum() {
+        StringCalculator calc = new StringCalculator();
+        assertAndLog(6, "1\n2,3", calc);
+    }
+
 }
