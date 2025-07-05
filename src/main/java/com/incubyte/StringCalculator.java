@@ -2,6 +2,8 @@ package com.incubyte;
 
 public class StringCalculator {
     public int add(String numbers) {
-        return 0;  // minimal code to pass the first test
+//        return 0;  // minimal code to pass the first test
+        throw new UnsupportedOperationException("Not implemented");
+
     }
 }
