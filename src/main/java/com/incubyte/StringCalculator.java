@@ -34,13 +34,14 @@ public class StringCalculator {
         List<Integer> negatives = new ArrayList<>();
 
         for (String part : parts) {
+
             if (part.isEmpty()) continue;
             int num = Integer.parseInt(part.trim());
             if (num < 0) {
                 negatives.add(num);
-            } else if (num <= 1000) {
-                sum += num;
-            }
+                } else if (num <= 1000) {
+                    sum += num;
+                }
         }
 
         if (!negatives.isEmpty()) {
