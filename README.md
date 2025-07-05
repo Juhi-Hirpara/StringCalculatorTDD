@@ -65,12 +65,14 @@ We walk through **one complete TDD cycle** using the empty string case.
 ### 🔴 RED Phase — Failing Test
 We began by writing a test for the simplest scenario: when the input string is empty (`""`), the method should return `0`. Since the method was not implemented at that point, this test **failed** as expected — marking the beginning of the **RED phase**.
 
-📸 ![Red Phase](screenshots/red-empty-string.png)
+📸 ![Red Phase!](https://github.com/user-attachments/assets/cfad9b52-676a-4ece-b96d-a2cdaa98154e)
 
 ### 🟢 GREEN Phase — Make Test Pass
 In the GREEN phase, we wrote the minimal logic required to pass the test — adding a condition to return 0 if the string is null or empty. This allowed the test to pass ✅.
 
-📸 ![Green Phase](screenshots/green-empty-string.png)
+
+📸 ![Green Phase]![green-empty-string](https://github.com/user-attachments/assets/78aeacdc-8887-4866-aaf1-37a2f226f7cb)
+
 
 ### 🛠 REFACTOR Phase — Code Cleanup
 After the test passed, we moved to the **REFACTOR** phase. Although the logic was correct, we restructured the code to make it more maintainable and scalable.
